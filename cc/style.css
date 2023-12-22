@@ -1,0 +1,48 @@
+body {
+	/** Change font **/
+	--cc-font-family: Roboto;
+
+	/** Change button primary color **/
+	--cc-btn-primary-bg: #61a229;
+	--cc-btn-primary-border-color: #95A329;
+	--cc-btn-primary-hover-bg: #444444;
+	--cc-btn-primary-hover-border-color: #444444;
+
+	/** Also make toggles the same color as the button **/
+	--cc-toggle-on-bg: var(--cc-btn-primary-bg);
+
+	/** Make the buttons a bit rounder **/
+	--cc-btn-border-radius: 25px;
+}
+
+#show-preferencesModal {
+	position: fixed;
+	bottom: 20px;
+	left: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-sizing: border-box;
+	width: 65px;
+	height: 65px;
+	padding: 10px;
+	cursor: pointer;
+	border-radius: 100%;
+	background-color: var(--cc-btn-primary-bg);
+	border: 2px solid var(--cc-btn-primary-border-color);
+	transition: background-color .15s ease,border-color .15s ease,color .15s ease;
+}
+
+#show-preferencesModal:hover {
+    background: var(--cc-btn-primary-hover-bg);
+    border-color: var(--cc-btn-primary-hover-border-color);
+    color: var(--cc-btn-primary-hover-color);
+}
+
+#show-preferencesModal.show-preferencesModal-hidden {
+	display: none;
+}
+
+#show-preferencesModal svg {
+	max-width: 100%;
+}

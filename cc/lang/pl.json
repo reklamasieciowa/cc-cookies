@@ -1,0 +1,148 @@
+{
+    "consentModal": {
+        "title": "Cenimy państwa prywatność",
+        "description": "Do poprawnego działania naszej strony niezbędne są niektóre pliki cookies. Zachęcamy również do wyrażenia zgody na użycie plików cookie narzędzi analitycznych. Dzięki nim możemy nieustannie ulepszać stronę. Więcej informacji znajdą państwo w <a href=\"https://example.com/polityka-prywatnosci\" title=\"Polityka prywatności\" target=\"_blank\">Polityce Prywatności</a>.<br><br>{{revisionMessage}}",
+		"revisionMessage": "Prosimy o ponowną zgodę na pliki cookie, ponieważ zaktualizowaliśmy działanie witryny.",
+        "acceptAllBtn": "Akceptuj wszystkie",
+        "acceptNecessaryBtn": "Odrzuć wszystkie",
+        "showPreferencesBtn": "Dostosuj"
+    },
+    "preferencesModal": {
+        "title": "Dostosuj ustawienia",
+        "acceptAllBtn": "Akceptuj wszystkie",
+        "acceptNecessaryBtn": "Odrzuć wszystkie",
+        "savePreferencesBtn": "Zapisz",
+        "closeIconLabel": "Zamknij",
+        "sections": [
+            {
+                "title": "\"Niezbędne\" pliki cookie",
+                "description": "<p>\"Niezbędne\" pliki cookie są wymagane dla działania strony. Zgoda na pozostałe kategorie, pomoże nam ulepszać działanie serwisu.</p><p>Firmy trzecie, np.: Google, również zapisują pliki cookie. Więcej informacji: <a href=\"https://policies.google.com/technologies/partner-sites?hl=pl\" target=\"_blank\" rel=\"noopener\">użycie danych</a> oraz <a href=\"https://policies.google.com/technologies/cookies?hl=pl#types-of-cookies\" target=\"_blank\" rel=\"noopener\">prywatność</a>.</p>"
+            },
+            {
+                "title": "\"Niezbędne\" pliki cookie",
+                "description": "Niezbędne pliki cookies są konieczne do prawidłowego działania witryny.",
+                "linkedCategory": "necessary",
+				"cookieTable": {
+                    "headers": {
+                        "name": "Nazwa",
+                        "domain": "Domena",
+                        "description": "Opis",
+                        "expiration": "Czas trwania"
+                    },
+                    "body": [
+                        {
+                            "name": "cc_cookie",
+                            "domain": "https://example.com",
+                            "description": "Przechowuje dane dotyczące zgody użytkownika.",
+                            "expiration": "1 rok"
+                        },
+                        {
+                            "name": "_GRECAPTCHA",
+                            "domain": ".google.com",
+                            "description": "Służy do ochrony przed spamem.",
+                            "expiration": "6 miesięcy"
+                        }
+                    ]
+                }
+            },
+            {
+                "title": "Analityczne pliki cookie",
+                "description": "Używamy plików cookie Google Analytics. Te pliki cookie będą przechowywane w przeglądarce tylko za państwa uprzednią zgodą.",
+                "linkedCategory": "analytics_storage",
+                "cookieTable": {
+                    "headers": {
+                        "name": "Nazwa",
+                        "domain": "Domena",
+                        "description": "Opis",
+                        "expiration": "Czas trwania"
+                    },
+                    "body": [
+                        {
+                            "name": "_ga[_customname]",
+                            "domain": "https://example.com",
+                            "description": "Rejestruje nowy identyfikator, który służy do generowania danych statystycznych dotyczących odwiedzin na stronie internetowej.",
+                            "expiration": "1 rok"
+                        },
+						{
+                            "name": "_gat[_customname]",
+                            "domain": "https://example.com",
+                            "description": "Plik używany jest do kontrolowania liczby żądań przeglądarki użytkownika do serwera.",
+                            "expiration": "1 dzień"
+                        },
+                        {
+                            "name": "_gid",
+                            "domain": "https://example.com",
+                            "description": "Rejestruje identyfikator, który służy do generowania danych statystycznych dotyczących odwiedzin na stronie internetowe.",
+                            "expiration": "1 dzień"
+                        }
+                    ]
+                }
+            },
+			{
+                "title": "Reklamowe pliki cookie",
+                "description": "Reklamowe pliki cookies służą m.in. do analizowania efektywności działań reklamowych i śledzenia konwersji.",
+                "linkedCategory": "ad_storage",
+                "cookieTable": {
+                    "headers": {
+                        "name": "Nazwa",
+                        "domain": "Domena",
+                        "description": "Opis",
+                        "expiration": "Czas trwania"
+                    },
+                    "body": [
+                        {
+                            "name": "_fbp",
+                            "domain": "https://example.com",
+                            "description": "Służy do zapisywania i śledzenia danych o wizytach użytkownika.",
+                            "expiration": "3 miesiące"
+                        },
+						{
+                            "name": "fr",
+                            "domain": "https://example.com",
+                            "description": "Służy do dostarczania użytkownikom dostosowanych reklam oraz retargetingu.",
+                            "expiration": "3 miesiące"
+                        },
+                        {
+                            "name": "IDE",
+                            "domain": "https://example.com",
+                            "description": "Służy do dostarczania użytkownikom dostosowanych reklam oraz retargetingu.",
+                            "expiration": "13 miesięcy (EOG)"
+                        },
+                        {
+                            "name": "_gcl_au",
+                            "domain": "https://example.com",
+                            "description": "Plik służy do przechowywania danych o interakcjach i śledzenia konwersji.",
+                            "expiration": "90 dni"
+                        },
+                        {
+                            "name": "NID",
+                            "domain": ".google.com",
+                            "description": "Służy do dostarczania reklam, retargetowania i przechowywania preferencji użytkownika.",
+                            "expiration": "6 miesięcy"
+                        },
+                        {
+                            "name": "RUL",
+                            "domain": ".google.com",
+                            "description": "Służy do weryfikacji poprawności wyświetlania reklam w witrynie.",
+                            "expiration": "12 miesięcy"
+                        }
+                    ]
+                }
+            },
+			{
+                "title": "Dane użytkownika związane z reklamami",
+                "description": "Zarządza zgodą na wysyłanie do Google danych użytkownika związanych z reklamami.",
+                "linkedCategory": "ad_user_data"
+            },
+			{
+                "title": "Reklamy spersonalizowane",
+                "description": "Zarządza zgodą na wyświetlanie reklam spersonalizowanych.",
+                "linkedCategory": "ad_personalization"
+            },
+            {
+                "title": "Więcej informacji",
+                "description": "Jeżeli chcą się Państwo dowiedzieć więcej, zachęcamy do zapoznania się z <a href=\"https://example.com/polityka-prywatnosci\" title=\"Polityka prywatności\" target=\"_blank\">Polityką Prywatności</a>."
+            }
+        ]
+    }
+}
