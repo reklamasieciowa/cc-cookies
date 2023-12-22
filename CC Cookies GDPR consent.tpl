@@ -198,7 +198,6 @@ const main = (data) => {
     if (queryPermission('get_cookies', cookieName)) {
       //get the cookie content and parse to object
       const cookieValue = JSON.parse(getCookieValues(cookieName));
-      const cookieCategories = cookieValue.categories;
       
       //check if we have any cookie data
       if (typeof cookieValue.categories !== 'undefined') {
