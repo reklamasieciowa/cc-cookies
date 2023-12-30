@@ -43,7 +43,7 @@ window.onload = () => {
 		},
 
 		onConsent: ({cookie}) => {
-			console.log('onConsent fired!', cookie)
+			//console.log('onConsent fired!', cookie)
 
 			document.getElementById('show-preferencesModal').classList.remove('show-preferencesModal-hidden');
 

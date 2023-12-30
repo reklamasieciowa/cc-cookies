@@ -104,7 +104,7 @@ ___SANDBOXED_JS_FOR_WEB_TEMPLATE___
 
 const queryPermission = require('queryPermission');
 const getCookieValues = require('getCookieValues');
-const cookieName = data.cookieName ? data.cookieName : 'lets-make-cookies_categories';
+const cookieName = data.cookieName ? data.cookieName : 'cc_cookie';
 const setDefaultConsentState = require('setDefaultConsentState');
 const updateConsentState = require('updateConsentState');
 const callInWindow = require('callInWindow');
