@@ -12,15 +12,17 @@
 1. Pobierz zip lub uruchom git pull.
 2. Dodaj katalog ./cc do projektu.
 3. Wczytaj CSS z cdn lub lokalnie:
-   - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v3.0.0-rc.17/dist/cookieconsent.css">
+   - \<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v3.0.0-rc.17/dist/cookieconsent.css">
 4. Wczytaj JS:
    - <script type="module" src="./cc/js/cookieconsent-config.js" defer></script>
 
 
 **JS - konfiguracja**
+
 ./cc/js/cookieconsent-config.js
 
 **CSS**
+
 ./cc/style.css
 
 **Oryginalna dokumentacja:** [CookieConsent v3](https://cookieconsent.orestbida.com/)
@@ -28,7 +30,7 @@
 ***
 
 ## Tag GTM
-1. Pobierz [szablon tagu GTM](./CC Cookies GDPR consent GTM template.tpl)
+1. Pobierz szablon tagu GTM CC Cookies GDPR consent GTM template.tpl
 2. Zaimportuj szablon w GTM
 ![Import GTM template](./docs_images/gtm_setup_01.jpg)
 3. Stwórz nowy tag korzystając z zaimportowanego szablonu.
@@ -53,13 +55,15 @@ Możesz dodatkowo zweryfikować Consent Mode w GA:
 
 1. Wczytaj stronę bez zgody na analytics_storage.
 2. Sprawdź parametr **gcs** wysyłany przez analytics.google.com/g/collect w konsoli:
-| gcs | description |
-| --- | --- |
-| G100 | Consent for both ad_storage and analytics_storage is denied. |
-| G110 | Consent is granted for ad_storage and denied for analytics_storage. |
-| G101 | Consent is denied for ad_storage and granted for analytics_storage. |
-| G111 | Consent for both ad_storage and analytics_storage is granted. |
-| G1-- | The site did not require consent for ad_storage or analytics_storage. |
+
+ | gcs | description |
+ | --- | --- |
+ | G100 | Consent for both ad_storage and analytics_storage is denied. |
+ | G110 | Consent is granted for ad_storage and denied for analytics_storage. |
+ | G101 | Consent is denied for ad_storage and granted for analytics_storage. |
+ | G111 | Consent for both ad_storage and analytics_storage is granted. |
+ | G1-- | The site did not require consent for ad_storage or analytics_storage. |
+
 
 > [!NOTE]
 > Pamiętaj, żeby ustawić anonymizeIp=true w tagu GA.
