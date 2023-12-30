@@ -35,7 +35,7 @@
 ![Import GTM template](./docs_images/gtm_setup_01.jpg)
 3. Stwórz nowy tag korzystając z zaimportowanego szablonu.
 ![Create new GTM tag from the template](./docs_images/gtm_setup_02.jpg)
-4. Dodaj wiersz z domyślnymi ustawieniami zgód. Możesz dostosować ustawienia ilub dodać wiele wierszy dla różnych regionów.
+4. Dodaj wiersz z domyślnymi ustawieniami zgód. Możesz dostosować ustawienia i / lub dodać wiele wierszy dla różnych regionów.
 ![Add default consent settings](./docs_images/gtm_setup_03.jpg)
 5. Ustaw wyzwalacz tagu na Consent Initialization - All Pages.
 ![Tag triggering](./docs_images/gtm_setup_06.jpg)
