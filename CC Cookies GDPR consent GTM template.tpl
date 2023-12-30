@@ -181,7 +181,7 @@ const onUserConsent = (consent) => {
  * update callback
  */
 const main = (data) => {
-
+  
   if (typeof data.defaultSettings !== 'undefined' ) {
     data.defaultSettings.forEach(settings => {
       defaultData = parseCommandData(settings);
@@ -193,6 +193,12 @@ const main = (data) => {
        }
     });
    }
+  
+    callInWindow('AddCookieSetCallback', onUserConsent);
+        
+    if(debugMode) {
+     log("callInWindow('AddCookieSetCallback', onUserConsent)");
+    }
   
     //Check if script can read cookies
     if (queryPermission('get_cookies', cookieName)) {
@@ -207,17 +213,9 @@ const main = (data) => {
         if(debugMode) {
          log('Consent updated with cookie values array: ', cookieValue.categories);
         }
-        
       } 
-      
-        callInWindow('AddCookieSetCallback', onUserConsent);
-        
-        if(debugMode) {
-         log("callInWindow('AddCookieSetCallback', onUserConsent)");
-        }
-
     }
-  
+
   gtagSet({
     url_passthrough: data.url_passthrough || false,
     ads_data_redaction: data.ads_data_redaction || false
