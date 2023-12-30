@@ -12,7 +12,7 @@
 1. Pobierz zip lub uruchom git pull.
 2. Dodaj katalog ./cc do projektu.
 3. Wczytaj CSS z cdn lub lokalnie:
-   - \<link rel="stylesheet" \href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v3.0.0-rc.17/dist/cookieconsent.css">
+   - \<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v3.0.0-rc.17/dist/cookieconsent.css">
 4. Wczytaj JS:
    - <script type="module" src="./cc/js/cookieconsent-config.js" defer></script>
 

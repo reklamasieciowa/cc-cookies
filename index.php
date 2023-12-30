@@ -26,6 +26,9 @@
 	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
 
-	<h1>Just testing...</h1>
+	<div id="content">
+		<h1>CookieConsent v3<br>skonfigurowane pod Consent Mode v2<br>+ szablon tagu GTM</h1>
+		<a href="https://github.com/reklamasieciowa/cc-cookies" target="_blank"><h3>Docs</h3></a>
+	</div>
 </body>
 </html>
