@@ -42,6 +42,23 @@
 6. Jeżeli korzystasz z innych tagów, ustaw im wymagane zgody.
 ![Tags consent](./docs_images/gtm_setup_07.jpg)
 
+### Domyślne kategorie zgód Google
+
+ | nazwa | opis |
+ | --- | --- |
+ | ad_storage | Umożliwia przechowywanie danych (np. plików cookie) związanych z reklamami. |
+ | analytics_storage  | Umożliwia przechowywanie danych (np. plików cookie) dotyczących statystyk, np. czasu trwania wizyty. |
+ | functionality_storage | Umożliwia przechowywanie danych, które obsługują funkcje witryny lub aplikacji, np. ustawień języka. |
+ | personalization_storage | Umożliwia przechowywanie danych dotyczących personalizacji, np. rekomendacji filmów. |
+ | security_storage | Umożliwia przechowywanie danych związanych z zabezpieczeniami, takimi jak funkcja uwierzytelniania, zapobieganie oszustwom i inne mechanizmy ochrony użytkowników. |
+
+### Nowe kategorie w Consent Mode v2
+
+ | nazwa | opis |
+ | --- | --- |
+ | ad_user_data | Zgoda na wysyłanie do Google danych użytkownika związanych z reklamami. |
+ | ad_personalization | Zgoda na reklamy spersonalizowane. |
+
 ## Debugowanie Tagu
 1. Jeżeli chcesz, włącz logowanie zdarzeń w konsoli (debug mode) w ustawieniach tagu.
 2. Uruchom debug view w GTM.
@@ -71,8 +88,11 @@ Możesz dodatkowo zweryfikować Consent Mode w GA:
 
 ## Zaawansowane
 
+**ads_data_redaction**
+
 > [!NOTE]
 > Sprawdź, czy domeny bez plików cookie (np. googledistribution.com) są używane, gdy ads_data_redaction ma wartość true.
 
+**url_passthrough**
 > [!NOTE]
 > Sprawdź, czy tagi gclid/dclid są dołączane do wychodzących adresów URL, gdy parametr url_passthrough ma wartość true i czy występuje parametr łączący _gl (np. https://www.example.com/?_gl=1*abcde5*).
