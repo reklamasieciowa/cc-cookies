@@ -66,6 +66,8 @@
 ![Consent Mode debug](./docs_images/gtm_setup_08.jpg)
 4. Po zdarzeniu ustawienia zgód (CookiesSet), GTM otrzyma aktualizacje zgód na wybrane przez użytkownika.
 ![Consent Mode debug](./docs_images/gtm_setup_09.jpg)
+5. Jeżeli użytkownik był już na stronie i zapisał zgody, GTM od razu otrzyma aktualizacje zgód na wybrane przez użytkownika.
+![Consent Mode debug](./docs_images/gtm_setup_10.jpg)
 
 ## Debugowanie GA
 Możesz dodatkowo zweryfikować Consent Mode w GA:
