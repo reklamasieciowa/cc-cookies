@@ -95,4 +95,4 @@ Możesz dodatkowo zweryfikować Consent Mode w GA:
 
 **url_passthrough**
 > [!NOTE]
-> Sprawdź, czy tagi gclid/dclid są dołączane do wychodzących adresów URL, gdy parametr url_passthrough ma wartość true i czy występuje parametr łączący _gl (np. https://www.example.com/?_gl=1*abcde5*).
+> Sprawdź, czy tagi gclid/dclid są dołączane do wychodzących adresów URL, gdy parametr url_passthrough ma wartość true i czy występuje parametr łączący _gl (np. \https://www.example.com/?_gl=1*abcde5*).
