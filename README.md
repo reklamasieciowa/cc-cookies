@@ -58,12 +58,21 @@ Możesz dodatkowo zweryfikować Consent Mode w GA:
 
  | gcs | description |
  | --- | --- |
- | G100 | Consent for both ad_storage and analytics_storage is denied. |
- | G110 | Consent is granted for ad_storage and denied for analytics_storage. |
- | G101 | Consent is denied for ad_storage and granted for analytics_storage. |
- | G111 | Consent for both ad_storage and analytics_storage is granted. |
- | G1-- | The site did not require consent for ad_storage or analytics_storage. |
+ | G100 | Odmowa udzielenia zgody zarówno na ad_storage, jak i w przypadku elementu analytics_storage. |
+ | G110 | Udzielono zgody w przypadku: ad_storage i odmówiono w przypadku: analytics_storage. |
+ | G101 | Udzielono zgody w przypadku: ad_storage, a w przypadku: analytics_storage. |
+ | G111 | Udzielono zgody zarówno na ad_storage, jak i na analytics_storage. |
+ | G1-- | Witryna nie wymagała zgody w przypadku tych domen: ad_storage ani analytics_storage. |
 
+ > [!NOTE]
+> Pamiętaj, żeby ustawić anonymizeIp=true w tagu GA.
+
+***
+
+## Zaawansowane
 
 > [!NOTE]
-> Pamiętaj, żeby ustawić anonymizeIp=true w tagu GA.
+> Sprawdź, czy domeny bez plików cookie (np. googledistribution.com) są używane, gdy ads_data_redaction ma wartość true.
+
+> [!NOTE]
+> Sprawdź, czy tagi gclid/dclid są dołączane do wychodzących adresów URL, gdy parametr url_passthrough ma wartość true i czy występuje parametr łączący _gl (np. https://www.example.com/?_gl=1*abcde5*).
