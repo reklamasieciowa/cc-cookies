@@ -194,11 +194,11 @@ const main = (data) => {
     });
    }
   
-    callInWindow('AddCookieSetCallback', onUserConsent);
+      callInWindow('AddCookieSetCallback', onUserConsent);
         
-    if(debugMode) {
-     log("callInWindow('AddCookieSetCallback', onUserConsent)");
-    }
+      if(debugMode) {
+       log("callInWindow('AddCookieSetCallback', onUserConsent)");
+      }
   
     //Check if script can read cookies
     if (queryPermission('get_cookies', cookieName)) {
