@@ -6,10 +6,9 @@
 	<title>CC Cookies</title>
 
 	<link rel="stylesheet" href="./css/style.css">
-	<link rel="stylesheet" href="./cc/style.css">
 
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v3.0.0-rc.17/dist/cookieconsent.css">
-
+	<link rel="stylesheet" href="./cc/css/style.css">
+	<link rel="stylesheet" href="./cc/css/cookieconsent.css">
 	<script type="module" src="./cc/js/cookieconsent-config.js" defer></script>
 
 	<!-- Google Tag Manager -->

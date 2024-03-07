@@ -1,4 +1,4 @@
-import 'https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v3.0.0-rc.17/dist/cookieconsent.umd.js';
+import './cookieconsent.umd.js';
 
 /**
  * All config. options available here:
@@ -7,7 +7,7 @@ import 'https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v3.0.0-rc.17/dist/co
 window.onload = () => {
 
 	CookieConsent.run({
-
+		debug: window.location.href.search("[?&]ccdebug=") != -1,
 		root: 'body',
 		// autoShow: true,
 		// disablePageInteraction: true,
@@ -38,36 +38,46 @@ window.onload = () => {
 			}
 		},
 
-		onFirstConsent: ({cookie}) => {
-			console.log('onFirstConsent fired',cookie);
+		onFirstConsent: ({ cookie }) => {
+			console.log('onFirstConsent fired', cookie);
 		},
 
-		onConsent: ({cookie}) => {
-			//console.log('onConsent fired!', cookie)
+		onConsent: ({ cookie }) => {
+			if (CookieConsent.getConfig('debug')) {
+				console.log('onConsent fired!', cookie);
+			}
 
 			document.getElementById('show-preferencesModal').classList.remove('show-preferencesModal-hidden');
 
 			sendCookieEvent();
 		},
 
-		onChange: ({changedCategories, changedServices}) => {
-			console.log('onChange fired!', changedCategories, changedServices);
+		onChange: ({ changedCategories, changedServices }) => {
+			if (CookieConsent.getConfig('debug')) {
+				console.log('onChange fired!', changedCategories, changedServices);
+			}
 
 			sendCookieEvent();
 		},
 
-		onModalReady: ({modalName}) => {
-			//console.log('ready:', modalName);
+		onModalReady: ({ modalName }) => {
+			if (CookieConsent.getConfig('debug')) {
+				console.log('ready:', modalName);
+			}
 		},
 
-		onModalShow: ({modalName}) => {
-			//console.log('visible:', modalName);
+		onModalShow: ({ modalName }) => {
+			if (CookieConsent.getConfig('debug')) {
+				console.log('visible:', modalName);
+			}
 
 			document.getElementById('show-preferencesModal').classList.add('show-preferencesModal-hidden');
 		},
 
-		onModalHide: ({modalName}) => {
-			//console.log('hidden:', modalName);
+		onModalHide: ({ modalName }) => {
+			if (CookieConsent.getConfig('debug')) {
+				console.log('hidden:', modalName);
+			}
 
 			document.getElementById('show-preferencesModal').classList.remove('show-preferencesModal-hidden');
 		},
@@ -113,19 +123,19 @@ window.onload = () => {
 							name: '_fbp',
 						},
 						{
-							name: 'fr', 
+							name: 'fr',
 						},
 						{
-							name: 'IDE', 
+							name: 'IDE',
 						},
 						{
-							name: '_gcl_au', 
+							name: '_gcl_au',
 						},
 						{
-							name: 'NID', 
+							name: 'NID',
 						},
 						{
-							name: 'RUL', 
+							name: 'RUL',
 						}
 					]
 				},
@@ -157,20 +167,27 @@ function sendCookieEvent() {
 	dataLayer.push({
 		'event': 'CookiesSet'
 	});
-	
+
 	let CookiesSetEvent = new CustomEvent('CookiesSet', { 'detail': CookieConsent.getCookie('categories') });
 
 	document.dispatchEvent(CookiesSetEvent);
-	console.log('sendCookieEvent with categories: ', CookieConsent.getCookie('categories'));
+
+	if (CookieConsent.getConfig('debug')) {
+		console.log('sendCookieEvent with categories: ', CookieConsent.getCookie('categories'));
+	}
 }
 
-window.AddCookieSetCallback = function( callback ) {
-	document.addEventListener('CookiesSet', function(event) {
+window.AddCookieSetCallback = function (callback) {
+	document.addEventListener('CookiesSet', function (event) {
 		if (typeof callback == 'function' && event.detail) {
 			callback(event.detail);
-			console.log('CookiesSet callback called with data:', event.detail);
+			if (CookieConsent.getConfig('debug')) {
+				console.log('CookiesSet callback called with data:', event.detail);
+			}
 		} else {
-			console.log('Invalid data passed to CookiesSet callback:', event);
+			if (CookieConsent.getConfig('debug')) {
+				console.log('Invalid data passed to CookiesSet callback:', event);
+			}
 		}
 	});
 }
