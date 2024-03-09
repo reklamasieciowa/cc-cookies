@@ -9,11 +9,9 @@
 
 	<link rel="stylesheet" href="./cc/css/style.css">
 	<link rel="stylesheet" href="./cc/css/cookieconsent.css">
-	<link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/orestbida/iframemanager@1.2.5/dist/iframemanager.css"
-    />
-	<script defer src="https://cdn.jsdelivr.net/gh/orestbida/iframemanager@1.2.5/dist/iframemanager.js"></script>
+	<link rel="stylesheet" href="./cc/css/iframemanager.css">
+
+	<script type="module" src="./cc/js/iframemanager.js" defer></script>
 	<script type="module" src="./cc/js/cookieconsent-config.js" defer></script>
 
 	<!-- Google Tag Manager -->

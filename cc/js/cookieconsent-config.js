@@ -1,5 +1,5 @@
 import './cookieconsent.umd.js';
-import { iframeManager } from './iframemanager.js';
+import { iframeManager } from './iframemanager-config.js';
 var im = iframeManager();
 /**
  * All config. options available here:
