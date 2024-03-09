@@ -210,6 +210,7 @@ function sendCookieEvent() {
 		'security_storage': CookieConsent.acceptedCategory('security_storage') ? 'granted' : 'denied',
 	});
 	
+	// An alternative method of sending consent to GTM via the AddCookieSetCallback callback after the CookiesSet event.
 	// window.dataLayer = window.dataLayer || [];
 	// dataLayer.push({
 	// 	'event': 'CookiesSet'
@@ -231,6 +232,7 @@ function sendCookieEvent() {
 	}
 }
 
+// An alternative method of sending consent to GTM via the AddCookieSetCallback callback after the CookiesSet event.
 // window.AddCookieSetCallback = function (callback) {
 // 	document.addEventListener('CookiesSet', function (event) {
 // 		if (typeof callback == 'function' && event.detail) {
