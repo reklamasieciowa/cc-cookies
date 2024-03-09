@@ -16,11 +16,11 @@
         "closeIconLabel": "Zamknij",
         "sections": [
             {
-                "title": "\"Niezbędne\" pliki cookie",
-                "description": "<p>\"Niezbędne\" pliki cookie są wymagane dla działania strony. Zgoda na pozostałe kategorie, pomoże nam ulepszać działanie serwisu.</p> <p>Firmy trzecie, np.: Google, również zapisują pliki cookie. Więcej informacji: <a href=\"https://policies.google.com/technologies/partner-sites?hl=pl\" target=\"_blank\" rel=\"noopener\">użycie danych</a> oraz <a href=\"https://policies.google.com/technologies/cookies?hl=pl#types-of-cookies\" target=\"_blank\" rel=\"noopener\">prywatność</a>.</p>"
+                "title": "Niezbędne pliki cookie",
+                "description": "<p>Niezbędne pliki cookie są wymagane dla działania strony. Zgoda na pozostałe kategorie, pomoże nam ulepszać działanie serwisu.</p> <p>Firmy trzecie, np.: Google, również zapisują pliki cookie. Więcej informacji: <a href=\"https://policies.google.com/technologies/partner-sites?hl=pl\" target=\"_blank\" rel=\"noopener\">użycie danych</a> oraz <a href=\"https://policies.google.com/technologies/cookies?hl=pl#types-of-cookies\" target=\"_blank\" rel=\"noopener\">prywatność</a>.</p>"
             },
             {
-                "title": "\"Niezbędne\" pliki cookie",
+                "title": "Niezbędne pliki cookie",
                 "description": "Niezbędne pliki cookies są konieczne do prawidłowego działania witryny.",
                 "linkedCategory": "necessary",
 				"cookieTable": {

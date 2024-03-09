@@ -155,8 +155,8 @@ window.onload = () => {
 		},
 
 		language: {
-			default: 'pl',
-			autoDetect: 'document',
+			default: 'en',
+			//autoDetect: 'document',
 			translations: {
 				'pl': './cc/lang/pl.json',
 				'en': './cc/lang/en.json'
