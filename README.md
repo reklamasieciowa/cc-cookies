@@ -27,7 +27,9 @@
 ./cc/style.css
 
 **Oryginalna dokumentacja:** 
+
 [CookieConsent v3](https://cookieconsent.orestbida.com/)
+
 [iframemanager](https://github.com/orestbida/iframemanager)
 
 ***
