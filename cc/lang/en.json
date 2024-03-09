@@ -35,6 +35,18 @@
                             "description": "Stores user consent data.",
                             "expiration": "1 year"
                         },
+						{
+                            "name": "cc_youtube",
+                            "domain": "https://example.com",
+                            "description": "Stores user consent on YouTube data.",
+                            "expiration": "6 months"
+                        },
+						{
+                            "name": "cc_vimeo",
+                            "domain": "https://example.com",
+                            "description": "Stores user consent on Vimeo data.",
+                            "expiration": "6 months"
+                        },
                         {
                             "name": "_GRECAPTCHA",
                             "domain": ".google.com",

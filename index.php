@@ -9,6 +9,11 @@
 
 	<link rel="stylesheet" href="./cc/css/style.css">
 	<link rel="stylesheet" href="./cc/css/cookieconsent.css">
+	<link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/orestbida/iframemanager@1.2.5/dist/iframemanager.css"
+    />
+	<script defer src="https://cdn.jsdelivr.net/gh/orestbida/iframemanager@1.2.5/dist/iframemanager.js"></script>
 	<script type="module" src="./cc/js/cookieconsent-config.js" defer></script>
 
 	<!-- Google Tag Manager -->
@@ -28,6 +33,24 @@
 	<div id="content">
 		<h1>CookieConsent v3<br>skonfigurowane pod Consent Mode v2<br>+ szablon tagu GTM</h1>
 		<a href="https://github.com/reklamasieciowa/cc-cookies" target="_blank"><h3>Docs</h3></a>
+
+		<br />
+		<br />
+
+		<h2>Testing YouTube</h2>
+
+		<div data-service="youtube" data-id="5b35haQV7tU" data-autoscale></div>
+
+		<br />
+
+		<h2>Testing Vimeo</h2>
+
+		<div
+		data-service="vimeo"
+		data-id="776749483"
+		data-title="Apple “Escape From The Office”"
+		data-autoscale
+		></div>
 	</div>
 </body>
 </html>

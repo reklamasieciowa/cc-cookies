@@ -1,5 +1,6 @@
 import './cookieconsent.umd.js';
-
+import { iframeManager } from './iframemanager.js';
+var im = iframeManager();
 /**
  * All config. options available here:
  * https://cookieconsent.orestbida.com/reference/configuration-reference.html
@@ -95,15 +96,37 @@ window.onload = () => {
 				autoClear: {
 					cookies: [
 						{
-							name: /^_ga/,   // regex: match all cookies starting with '_ga'
+							name: /^_ga/,   // GA
 						},
 						{
-							name: /^_gat/,   // string: exact cookie name
+							name: /^_gat/,   // GA
 						},
 						{
-							name: '_gid',   // string: exact cookie name
+							name: '_gid',   // GA
+						},
+						{
+							name: '__cf_bm', // vimeo
+						},
+						{
+							name: 'vuid', // vimeo
+						},
+						{
+							name: 'player', // vimeo
 						}
 					]
+				},
+
+				services: {
+					youtube: {
+					  label: 'Youtube Embed',
+					  onAccept: () => im.acceptService('youtube'),
+					  onReject: () => im.rejectService('youtube'),
+					},
+					vimeo: {
+					  label: 'Vimeo Embed',
+					  onAccept: () => im.acceptService('vimeo'),
+					  onReject: () => im.rejectService('vimeo'),
+					},
 				},
 
 				// https://cookieconsent.orestbida.com/reference/configuration-reference.html#category-services

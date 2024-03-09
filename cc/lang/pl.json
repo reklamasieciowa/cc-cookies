@@ -37,6 +37,18 @@
                             "description": "Przechowuje dane dotyczące zgody użytkownika.",
                             "expiration": "1 rok"
                         },
+						{
+                            "name": "cc_youtube",
+                            "domain": "https://example.com",
+                            "description": "Przechowuje dane dotyczące zgody na dane YouTube.",
+                            "expiration": "6 miesięcy"
+                        },
+						{
+                            "name": "cc_vimeo",
+                            "domain": "https://example.com",
+                            "description": "Przechowuje dane dotyczące zgody na dane Vimeo.",
+                            "expiration": "6 miesięcy"
+                        },
                         {
                             "name": "_GRECAPTCHA",
                             "domain": ".google.com",

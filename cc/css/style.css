@@ -21,6 +21,14 @@ body {
 
 	/** Make the buttons a bit rounder **/
 	--cc-btn-border-radius: 25px;
+
+	--im-btn-bg: #6e6e6e;
+	--im-btn-hover-bg: #29A632;
+	--im-btn-color: #fff;
+
+	--im-btn-s-bg: #29A632;
+	--im-btn-s-hover-bg: #29A632;
+	--im-btn-s-color: #fff;
 }
 
 .cm__btn-group:nth-child(2), .pm__btn-group:nth-child(2) {
@@ -59,4 +67,9 @@ body {
 
 #show-preferencesModal svg {
 	max-width: 100%;
+}
+
+.c-an .cc-text a {
+	color: unset!important;
+	font-size: unset!important;
 }
