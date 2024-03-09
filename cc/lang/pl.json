@@ -4,19 +4,20 @@
         "description": "Do poprawnego działania naszej strony niezbędne są niektóre pliki cookies. Zachęcamy również do wyrażenia zgody na użycie plików cookie narzędzi analitycznych. Dzięki nim możemy nieustannie ulepszać stronę. Więcej informacji znajdą państwo w <a href=\"https://example.com/polityka-prywatnosci\" title=\"Polityka prywatności\" target=\"_blank\">Polityce Prywatności</a>.<br><br>{{revisionMessage}}",
 		"revisionMessage": "Prosimy o ponowną zgodę na pliki cookie, ponieważ zaktualizowaliśmy działanie witryny.",
         "acceptAllBtn": "Akceptuj wszystkie",
-        "acceptNecessaryBtn": "Odrzuć wszystkie",
+        "acceptNecessaryBtn": "Tylko wymagane",
         "showPreferencesBtn": "Dostosuj"
+		
     },
     "preferencesModal": {
         "title": "Dostosuj ustawienia",
         "acceptAllBtn": "Akceptuj wszystkie",
-        "acceptNecessaryBtn": "Odrzuć wszystkie",
+        "acceptNecessaryBtn": "Tylko wymagane",
         "savePreferencesBtn": "Zapisz",
         "closeIconLabel": "Zamknij",
         "sections": [
             {
                 "title": "\"Niezbędne\" pliki cookie",
-                "description": "<p>\"Niezbędne\" pliki cookie są wymagane dla działania strony. Zgoda na pozostałe kategorie, pomoże nam ulepszać działanie serwisu.</p><p>Firmy trzecie, np.: Google, również zapisują pliki cookie. Więcej informacji: <a href=\"https://policies.google.com/technologies/partner-sites?hl=pl\" target=\"_blank\" rel=\"noopener\">użycie danych</a> oraz <a href=\"https://policies.google.com/technologies/cookies?hl=pl#types-of-cookies\" target=\"_blank\" rel=\"noopener\">prywatność</a>.</p>"
+                "description": "<p>\"Niezbędne\" pliki cookie są wymagane dla działania strony. Zgoda na pozostałe kategorie, pomoże nam ulepszać działanie serwisu.</p> <p>Firmy trzecie, np.: Google, również zapisują pliki cookie. Więcej informacji: <a href=\"https://policies.google.com/technologies/partner-sites?hl=pl\" target=\"_blank\" rel=\"noopener\">użycie danych</a> oraz <a href=\"https://policies.google.com/technologies/cookies?hl=pl#types-of-cookies\" target=\"_blank\" rel=\"noopener\">prywatność</a>.</p>"
             },
             {
                 "title": "\"Niezbędne\" pliki cookie",
@@ -138,6 +139,16 @@
                 "title": "Reklamy spersonalizowane",
                 "description": "Zarządza zgodą na wyświetlanie reklam spersonalizowanych.",
                 "linkedCategory": "ad_personalization"
+            },
+			{
+                "title": "Funkcjonalne pliki cookie",
+                "description": "Pliki odpowiedzialne za funkcjonowanie witryny, np.: zapamiętujące opcje wybrane przez użytkownika..",
+                "linkedCategory": "functionality_storage"
+            },
+			{
+                "title": "Personalizacyjne pliki cookie",
+                "description": "Pliki umożliwiające personalizację, np.: rekomendacji wideo.",
+                "linkedCategory": "personalization_storage"
             },
             {
                 "title": "Więcej informacji",

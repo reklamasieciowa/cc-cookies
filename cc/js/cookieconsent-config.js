@@ -26,8 +26,8 @@ window.onload = () => {
 		// https://cookieconsent.orestbida.com/reference/configuration-reference.html#guioptions
 		guiOptions: {
 			consentModal: {
-				layout: 'box',
-				position: 'bottom right',
+				layout: 'box wide',
+				position: 'middle center',
 				equalWeightButtons: false,
 				flipButtons: true
 			},
@@ -39,7 +39,9 @@ window.onload = () => {
 		},
 
 		onFirstConsent: ({ cookie }) => {
-			console.log('onFirstConsent fired', cookie);
+			if (CookieConsent.getConfig('debug')) {
+				console.log('onFirstConsent fired', cookie);
+			}
 		},
 
 		onConsent: ({ cookie }) => {
@@ -79,7 +81,9 @@ window.onload = () => {
 				console.log('hidden:', modalName);
 			}
 
-			document.getElementById('show-preferencesModal').classList.remove('show-preferencesModal-hidden');
+			if(CookieConsent.validConsent()){
+				document.getElementById('show-preferencesModal').classList.remove('show-preferencesModal-hidden');
+			}
 		},
 
 		categories: {
@@ -142,6 +146,12 @@ window.onload = () => {
 			},
 			ad_user_data: {},
 			ad_personalization: {},
+			functionality_storage: {},
+			personalization_storage: {},
+			security_storage: {
+				enabled: true,  // this category is enabled by default
+				readOnly: true  // this category cannot be disabled
+			},
 		},
 
 		language: {
@@ -162,32 +172,53 @@ window.onload = () => {
 	document.body.appendChild(cookieSettingsButton);
 };
 
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+
 function sendCookieEvent() {
-	window.dataLayer = window.dataLayer || [];
-	dataLayer.push({
-		'event': 'CookiesSet'
+
+	gtag('consent', 'update', {
+		'ad_user_data': CookieConsent.acceptedCategory('ad_user_data') ? 'granted' : 'denied',
+		'ad_personalization': CookieConsent.acceptedCategory('ad_personalization') ? 'granted' : 'denied',
+		'ad_storage': CookieConsent.acceptedCategory('ad_storage') ? 'granted' : 'denied',
+		'analytics_storage': CookieConsent.acceptedCategory('analytics_storage') ? 'granted' : 'denied',
+		'personalization_storage': CookieConsent.acceptedCategory('personalization_storage') ? 'granted' : 'denied',
+		'functionality_storage': CookieConsent.acceptedCategory('functionality_storage') ? 'granted' : 'denied',
+		'security_storage': CookieConsent.acceptedCategory('security_storage') ? 'granted' : 'denied',
 	});
+	
+	// window.dataLayer = window.dataLayer || [];
+	// dataLayer.push({
+	// 	'event': 'CookiesSet'
+	// });
 
-	let CookiesSetEvent = new CustomEvent('CookiesSet', { 'detail': CookieConsent.getCookie('categories') });
+	//let CookiesSetEvent = new CustomEvent('CookiesSet', { 'detail': CookieConsent.getCookie('categories') });
 
-	document.dispatchEvent(CookiesSetEvent);
+	//document.dispatchEvent(CookiesSetEvent);
 
 	if (CookieConsent.getConfig('debug')) {
 		console.log('sendCookieEvent with categories: ', CookieConsent.getCookie('categories'));
+		console.log('analytics_storage: ' + CookieConsent.acceptedCategory('analytics_storage'));
+		console.log('ad_storage: ' + CookieConsent.acceptedCategory('ad_storage'));
+		console.log('ad_user_data: ' + CookieConsent.acceptedCategory('ad_user_data'));
+		console.log('ad_personalization: ' + CookieConsent.acceptedCategory('ad_personalization'));
+		console.log('personalization_storage: ' + CookieConsent.acceptedCategory('personalization_storage'));
+		console.log('functionality_storage: ' + CookieConsent.acceptedCategory('functionality_storage'));
+		console.log('security_storage: ' + CookieConsent.acceptedCategory('security_storage'));
 	}
 }
 
-window.AddCookieSetCallback = function (callback) {
-	document.addEventListener('CookiesSet', function (event) {
-		if (typeof callback == 'function' && event.detail) {
-			callback(event.detail);
-			if (CookieConsent.getConfig('debug')) {
-				console.log('CookiesSet callback called with data:', event.detail);
-			}
-		} else {
-			if (CookieConsent.getConfig('debug')) {
-				console.log('Invalid data passed to CookiesSet callback:', event);
-			}
-		}
-	});
-}
+// window.AddCookieSetCallback = function (callback) {
+// 	document.addEventListener('CookiesSet', function (event) {
+// 		if (typeof callback == 'function' && event.detail) {
+// 			callback(event.detail);
+// 			if (CookieConsent.getConfig('debug')) {
+// 				console.log('CookiesSet callback called with data:', event.detail);
+// 			}
+// 		} else {
+// 			if (CookieConsent.getConfig('debug')) {
+// 				console.log('Invalid data passed to CookiesSet callback:', event);
+// 			}
+// 		}
+// 	});
+// }
