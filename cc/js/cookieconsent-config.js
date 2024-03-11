@@ -43,6 +43,8 @@ window.onload = () => {
 			if (CookieConsent.getConfig('debug')) {
 				console.log('onFirstConsent fired', cookie);
 			}
+
+			sendCookieEvent();
 		},
 
 		onConsent: ({ cookie }) => {
@@ -51,8 +53,6 @@ window.onload = () => {
 			}
 
 			document.getElementById('show-preferencesModal').classList.remove('show-preferencesModal-hidden');
-
-			sendCookieEvent();
 		},
 
 		onChange: ({ changedCategories, changedServices }) => {
