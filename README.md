@@ -30,6 +30,7 @@
 ./cc/style.css
 
 **Tłumaczenia**
+
 **Uwaga:** W konfiguracji ścieżek do plików językowych należy używać ścieżek bezwględnych. Ścieżki względne powodują błąd - moduł nie jest widoczny na podstronach.
 
 **Oryginalna dokumentacja:** 
