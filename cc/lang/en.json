@@ -85,6 +85,18 @@
                             "domain": "https://example.com",
                             "description": "Registers an identifier that is used to generate statistical data on website visits.",
                             "expiration": "1 day"
+                        },
+						{
+							"name": "__cf_bm",
+                            "domain": "https://example.com",
+                            "description": "Used to read and filter requests from bots.",
+                            "expiration": "30 minutes"
+                        },
+                        {
+							"name": "vuid",
+                            "domain": "https://example.com",
+                            "description": "Used to store the user's usage history.",
+                            "expiration": "2 years"
                         }
                     ]
                 }
