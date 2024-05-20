@@ -181,8 +181,8 @@ window.onload = () => {
 			default: 'pl',
 			autoDetect: 'document',
 			translations: {
-				'pl': './cc/lang/pl.json', //Use abslute paths
-				'en': './cc/lang/en.json' //Use abslute paths
+				'pl': './cc/lang/pl.json', //Use absslute paths
+				'en': './cc/lang/en.json' //Use absslute paths
 			}
 		}
 	});
